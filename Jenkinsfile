@@ -23,10 +23,10 @@ node('php'){
         )
     }
     stage('Docker Build') {
-        sh 'docker build -t genijunior/todoapi:$BUILD_NUMBER .'
+        sh 'docker build -t genijunior/api:$BUILD_NUMBER .'
     }
     
     stage('Docker Ship') {
-        sh 'docker push genijunior/todoapi:$BUILD_NUMBER'
+        sh 'docker push genijunior/api:$BUILD_NUMBER'
     }
 }
